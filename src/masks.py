@@ -1,12 +1,13 @@
 def get_mask_card_number(card_number: str) -> str:
     """Функция, которая маскирует номер карты"""
-
-    card_number_str = str(card_number)
-    return f"{card_number_str[:4]} {card_number_str[4:6]}** **** {card_number_str[12:]}"
-
+    if card_number.isdigit() and len(card_number) == 16:
+        return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[12:]}"
+    else:
+        return "Номер карты указан неверно"
 
 def get_mask_account(account_number: str) -> str:
     """Функция, которая маскирует номер счета"""
-
-    account_number_str = str(account_number)
-    return f"**{account_number_str[-4:]}"
+    if account_number.isdigit() and len(account_number) == 20:
+        return f"**{account_number[-4:]}"
+    else:
+        return "Номер счета указан неверно"
