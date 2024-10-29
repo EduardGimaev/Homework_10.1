@@ -2,7 +2,7 @@ from typing import Any
 
 
 def filter_by_state(list_dictionary: list[dict[str, Any]], state_id: str = "EXECUTED") -> list[dict[str, Any]]:
-    """ "Функция, фильтрующая словари по указанному параметру"""
+    """Функция, фильтрующая словари по указанному параметру"""
 
     new_list = []
 
