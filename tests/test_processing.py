@@ -1,5 +1,7 @@
 import pytest
 
+from typing import Any
+
 from src.processing import filter_by_state, sort_by_date
 
 
@@ -20,11 +22,11 @@ from src.processing import filter_by_state, sort_by_date
         )
     ],
 )
-def test_filter_by_state(list_dictionary, expected):
+def test_filter_by_state(list_dictionary: list[dict[str, Any]], expected: list[dict[str, Any]]) -> None:
     assert filter_by_state(list_dictionary) == expected
 
 
-def test_filter_by_state_2(list_dict):
+def test_filter_by_state_2(list_dict: list[dict[str, Any]]) -> None:
     assert (
         filter_by_state(
             [
@@ -71,5 +73,5 @@ def test_filter_by_state_2(list_dict):
         ),
     ],
 )
-def test_sort_by_date(list_dictionary, expected):
+def test_sort_by_date(list_dictionary: list[dict[str, Any]], expected: list[dict[str, Any]]) -> None:
     assert sort_by_date(list_dictionary) == expected

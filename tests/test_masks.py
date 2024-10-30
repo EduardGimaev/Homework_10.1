@@ -20,7 +20,7 @@ from src.masks import get_mask_account, get_mask_card_number
         (",.,/", "Номер карты указан неверно"),
     ],
 )
-def test_get_mask_card_number(card_number, expected):
+def test_get_mask_card_number(card_number: str, expected: str) -> None:
     assert get_mask_card_number(card_number) == expected
 
 
@@ -42,5 +42,5 @@ def test_get_mask_card_number(card_number, expected):
         (",./,", "Номер счета указан неверно"),
     ],
 )
-def test_get_mask_account(account_number, expected):
+def test_get_mask_account(account_number: str, expected: str) -> None:
     assert get_mask_account(account_number) == expected
