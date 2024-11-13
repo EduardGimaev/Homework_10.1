@@ -20,6 +20,7 @@ def transaction_descriptions(transaction_list):
 
 
 def card_number_generator(start, stop):
+    """Функция, которая генерирует номер карты, в зависимости от указанного диапазона"""
     for number in range(start, stop):
         card_number = str(number)
         while len(card_number) < 16:
