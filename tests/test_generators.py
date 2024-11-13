@@ -3,7 +3,6 @@ from src.generators import filter_by_currency, transaction_descriptions, card_nu
 
 
 @pytest.mark.parametrize("descriptions", ["Перевод организации"])
-
 def test_transaction_descriptions(transaction_list, descriptions):
     """Функция тестирует выдачу списка описания операций"""
     trans = transaction_descriptions(transaction_list)
@@ -11,7 +10,7 @@ def test_transaction_descriptions(transaction_list, descriptions):
 
 
 def test_filter_by_currency(transaction_list, description):
-    """"Функция тестирует выдачу операций по названию валют"""
+    """ "Функция тестирует выдачу операций по названию валют"""
     assert list(filter_by_currency(transaction_list, "USD")) == description
 
 
