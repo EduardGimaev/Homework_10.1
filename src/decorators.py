@@ -1,6 +1,6 @@
 from functools import wraps
-from typing import Callable, Any, Optional
 from time import time
+from typing import Any, Callable, Optional
 
 
 # def log(filename="mylog.txt") -> Callable:
