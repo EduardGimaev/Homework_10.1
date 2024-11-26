@@ -3,7 +3,6 @@ from time import time
 from typing import Any, Callable, Optional
 
 
-# def log(filename="mylog.txt") -> Callable:
 def log(filename: Optional[str] = None) -> Callable:
     """Декоратор логирования начала и конца выполнения функции, а также ее результата или возникновения ошибки"""
 
@@ -31,6 +30,7 @@ def log(filename: Optional[str] = None) -> Callable:
 
 
 def printing(func):
+    """Функция логирования начала и конца выполнения функции"""
     def wrapper(*args, **kwargs):
         print(f"Function {func} started")
         result = func(*args, **kwargs)
@@ -42,6 +42,7 @@ def printing(func):
 
 
 def timer(func):
+    """Функция таймера выполнения функции"""
     def wrapper(*args, **kwargs):
         time_1 = time()
         result = func(*args, **kwargs)
